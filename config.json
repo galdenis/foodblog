@@ -1,0 +1,15 @@
+{
+  "params": {
+    "local_server": "False",
+    "local_uri": "mysql://root:12345678@127.0.0.1/blog",
+    "prod_uri": "mysql://b6bc90bf105ead:409297a7@us-cdbr-east-06.cleardb.net/heroku_2d7b9682606f1ae",
+    "blog_name": "Food Blog",
+    "tag_line": "Einfache und schnelle Kochrezepte!",
+    "blog_title": "Food Blog",
+    "fb_url": "https://facebook.com",
+    "tw_url": "https://twitter.com",
+    "gh_url": "https://github.com",
+    "admin_username": "galfano",
+    "admin_password": "Welcome22!"
+  }
+}

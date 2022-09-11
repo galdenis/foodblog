@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<!-- Page Header-->
+<header class="masthead" style="background-image: url('{{ url_for('static', filename='assets/img/admin-bg.jpg') }}')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="site-heading">
+                    <h1>Welcome Admin</h1>
+                    <span class="subheading">You can control everything</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Main Content-->
+<div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+            <form name="Edit" id="edit" action="/edit/{{SerialNum}}" method="post">
+                <div class="form-floating">
+                    <input class="form-control" placeholder="Title" name="title" id="title" type="text"
+                        value="{{post.Title}}" />
+                    <label>Title</label>
+                </div>
+                <div class="form-floating">
+                    <input class="form-control" placeholder="Subtitle" name="SubTitle" id="SubTitle" type="text"
+                        value="{{post.SubTitle}}" />
+                    <label>Subtitle</label>
+                </div>
+                <div class="form-floating">
+                    <input class="form-control" placeholder="Slug" name="slug" id="slug" type="text"
+                        value="{{post.slug}}" />
+                    <label>Slug</label>
+                </div>
+                <div class="form-floating">
+                    <input class="form-control" placeholder="Image Path" name="img_path" id="img_path" type="text"
+                        value="{{post.img_path}}" />
+                    <label>Image Path</label>
+                </div>
+                <div class="form-floating">
+                    <textarea class="form-control" placeholder="Content" name="content" id="content"
+                        style="height: 12rem"> {{post.Content}} </textarea>
+                    <label>Content</label>
+                </div>
+                <br />
+                <!-- Submit success message-->
+                <!---->
+                <!-- This is what your users will see when the form-->
+                <!-- has successfully submitted-->
+                <div class="d-none" id="submitSuccessMessage">
+                    <div class="text-center mb-3">
+                        <div class="fw-bolder">Form submission successful!</div>
+                        To activate this form, sign up at
+                        <br />
+                        <a
+                            href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                    </div>
+                </div>
+                <div class="d-none" id="submitErrorMessage">
+                    <div class="text-center text-danger mb-3">Error sending message!</div>
+                </div>
+                <!-- Submit Button-->
+                <button class="btn btn-primary" id="sendMessageButton" type="submit">Submit</button>
+            </form>
+            <br>
+        </div>
+    </div>
+</div>
+{% endblock %}
